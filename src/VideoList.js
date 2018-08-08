@@ -13,8 +13,10 @@ export default class videoList extends Component {
             items: []
         };
     }
-
+    componentDidMount() {
+    }
     render() {
+        // повал, я выносил за рендер, крашилось всё к чертям
         const sear = this.props.match.params.search;
         fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&q="+ sear +"&type=video&key=AIzaSyC_f2p8D7ASlvE--ZhxUzKce7Dc1fjiWR4")
             .then(res => res.json())
@@ -42,14 +44,7 @@ export default class videoList extends Component {
                 <MuiThemeProvider >
 
                     <SearchBar/>
-                    <div
-                        style={{
-                            width: '100vw',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            marginTop: '5vh',
-                            marginBottom: '5vh',
-                        }}>
+                    <div className='listBottom'>
                         {items.map(item => (
                             <div>
                                 <Route exact path="/vid/:id" component={VideoDeatail}/>

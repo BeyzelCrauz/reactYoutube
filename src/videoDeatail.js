@@ -50,7 +50,7 @@ export default class VideoDeatail extends Component {
         return (
             <MuiThemeProvider >
                 <SearchBar/>
-                <div className={'videowrapper'}>
+                <div className='videowrapper'>
                     <YouTube
                         videoId={this.props.match.params.id}
                         opts={opts}
@@ -58,14 +58,14 @@ export default class VideoDeatail extends Component {
                     />
                 </div>
                 <Paper
-                    className={'videowrapper paperw'}
+                    className='videowrapper paperw'
                     zDepth={1}>
                     {this.state.items.map(item => (
-                        <div className={'texts'}>
-                            <div className={'title'}>
+                        <div className='texts'>
+                            <div className='title'>
                                 {item.snippet.title}
                             </div>
-                            <div className={'descr'}>
+                            <div className='descr'>
                                 {item.snippet.description}
                             </div>
                         </div>

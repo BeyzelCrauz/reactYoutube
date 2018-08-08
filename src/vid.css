@@ -1,3 +1,31 @@
+.searchBottom{
+
+    display: flex;
+    margin-top: 10vh;
+}
+.searchLeft {
+
+    width: 60vw;
+    margin-left: 15vw;
+    margin-right: 3vw;
+}
+.autoComplete{
+    width: 96% !important;
+    margin-left: 2%;
+    height: 5vh;
+}
+.searchButton{
+    width: 7vw;
+    line-height: 5vh;
+    margin: 0;
+}
+.listBottom{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
 .videoY{
     width: 70vw;
     display: block;
