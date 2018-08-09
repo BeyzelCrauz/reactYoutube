@@ -95,3 +95,77 @@
         margin-top: 2vh;
         font-size: 1.8vh;
     }
+
+@media screen and (max-width: 980px){
+    .searchBottom{
+        flex-direction: column;
+        width: 90vw;
+        margin-left: 5vw;
+    }
+    .searchLeft{
+        width: 90vw;
+        margin-left: 0;
+        margin-bottom: 5vh;
+    }
+    .linkSearch{
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .searchButton{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .videoY{
+        width: 90vw;
+        margin-left: 5vw;
+    }
+    .wrapper{
+        width: 90vw;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-bottom: 5vh;
+    }
+    .wrapper > .thumb{
+        width: 90vw;
+        height: 50.4vw;
+        margin-left: 0;
+        -webkit-background-size: 90vw 50.4vw;
+        background-size: 90vw 50.4vw;
+        margin-bottom: 5vh;
+    }
+    .wrapper > .descr{
+        width: 85vw;
+        margin-left: 2.5vw;
+        height: auto;
+    }
+    .wrapper > .descr > .title{
+        font-size: 2.8vh;
+    }
+    .wrapper > .descr > .text{
+        font-size: 2.2vh;
+    }
+    .videowrapper{
+        width: 90vw;
+        margin-left: 5vw;
+    }
+    .videowrapper > span > iframe{
+        width: 90vw;
+        height: 50vw;
+    }
+    .videowrapper > .texts {
+        width: 85vw;
+        margin-left: 2.5vw;
+    }
+    .videowrapper > .texts > .title{
+        font-size: 2.8vh;
+        margin-top: 2.5vh;
+        margin-bottom: 2.5vh;
+    }
+    .videowrapper > .texts > .descr{
+        font-size: 2.2vh;
+        margin-bottom: 2.5vh;
+        text-align: justify;
+    }
+}

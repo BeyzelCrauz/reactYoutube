@@ -20,19 +20,17 @@ export  default  class SearchBar extends Component {
             value: value
         });
     };
-    componentDidMount() {
-        fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&type=video&key=AIzaSyC_f2p8D7ASlvE--ZhxUzKce7Dc1fjiWR4")
-            .then(res => res.json())
-            .then(
-                (result) => {
-                    this.setState({
-                        items: result.items,
-                    });
-                },
-            );
-
-    }
     render() {
+        fetch("https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&q="+this.state.value+"&type=video&key=AIzaSyC_f2p8D7ASlvE--ZhxUzKce7Dc1fjiWR4")
+        .then(res => res.json())
+        .then(
+            (result) => {
+                this.setState({
+                    items: result.items,
+                });
+            },
+        );
+
         const value = this.state.value;
         this.state.sourse = this.state.items.map(item => (item.snippet.title));
         return (
@@ -53,7 +51,7 @@ export  default  class SearchBar extends Component {
                             filter={(value, key) => (key.indexOf(value) !== -1)}
                         />
                     </Paper>
-                    <Link to={`/list & ${value}`}>
+                    <Link to={`/list & ${value}`} className='linkSearch'>
                         <RaisedButton
                             className='searchButton'
                             label= 'Search'
